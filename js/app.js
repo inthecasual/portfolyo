@@ -22,6 +22,17 @@ contactForm.addEventListener("submit", (e) => {
         "Content-Type": "application/json",
       },
     },
-    { mode: "no-cors" }
-  );
+    
+  ).then(()=>{
+      name1.value = "";
+      email.value = "";
+      message.value = "";
+      alert("Mesajınız başarıyla bize ulaştı!");
+  }).catch(err => {
+      console.log(err);
+      name1.value = "";
+      email.value = "";
+      message.value = "";
+      alert("Bir Sorun Oluştu!");
+  })
 });
