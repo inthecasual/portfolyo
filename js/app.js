@@ -20,7 +20,9 @@ contactForm.addEventListener("submit", (e) => {
       body: JSON.stringify(formData),
       headers: {
         "Content-Type": "application/json",
+    
       },
+      mode: "no-cors"
     },
     
   ).then(()=>{
